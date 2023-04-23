@@ -21,7 +21,7 @@ public class TestController {
 
     @GetMapping("/testing")
     public String getTesting(){
-        return testService.getAllTesting().toString();
+        return "Hello Not Authenticated!";
     }
 
     @PostMapping("/test")

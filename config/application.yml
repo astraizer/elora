@@ -4,9 +4,9 @@ spring:
     driver-class-name : org.postgresql.Driver
     initialization-mode : always
     initialize : true
-    url : jdbc:postgresql://192.168.64.8:5432/nostra
-    username : nostra
-    password : nostra
+    url : jdbc:postgresql://localhost:5432/elora
+    username : nicholas
+    password : password
   jpa:
     database: POSTGRESQL
     hibernate:
