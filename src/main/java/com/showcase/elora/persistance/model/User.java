@@ -21,6 +21,8 @@ public class User implements UserDetails {
     private String roleId;
     private String email;
     private String password;
+    private String gender;
+    private String phone;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
@@ -29,7 +31,7 @@ public class User implements UserDetails {
 
     @Override
     public String getUsername() {
-        return null;
+        return this.email;
     }
 
     @Override

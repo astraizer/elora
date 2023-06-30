@@ -22,11 +22,11 @@ public class AuthenticationServiceImpl implements AuthenticationService {
     }
 
     @Override
-    public String authenticate() {
+    public String authenticate(String email,String password) {
         authenticationManager.authenticate(
-                new UsernamePasswordAuthenticationToken("email","password")
+                new UsernamePasswordAuthenticationToken(email,password)
         );
-        var user = userRepository.findByEmail("email").orElseThrow();
+        var user = userRepository.findByEmail(email).orElseThrow();
         return jwtService.generateToken(user);
     }
 }

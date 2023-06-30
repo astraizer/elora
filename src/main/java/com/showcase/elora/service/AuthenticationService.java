@@ -6,5 +6,5 @@ public interface AuthenticationService {
 
     User register();
 
-    String authenticate();
+    String authenticate(String email,String password);
 }
